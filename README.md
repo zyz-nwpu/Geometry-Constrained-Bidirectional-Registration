@@ -118,6 +118,10 @@ artifact/point/
 artifact/sparse/0/
 ```
 
+## Example
+
+We also provide a reference example containing images of an object, its camera poses, the dense point clouds obtained after training, and the final merged result. If needed, click [here](https://github.com/zyz-nwpu/Geometry-Constrained-Bidirectional-Point-Cloud-Registration/releases/download/example-data-v1/GCBPCR-example.zip).
+
 ## Acknowledgements
 
 We gratefully acknowledge the open-source communities behind Segment Anything Model 2, available [here](https://github.com/facebookresearch/sam2), and COLMAP, available [here](https://github.com/colmap/colmap), whose tools support semantic mask generation and multi-view reconstruction in this work.
