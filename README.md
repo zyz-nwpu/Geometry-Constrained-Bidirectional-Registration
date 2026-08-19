@@ -4,6 +4,9 @@
   <a href="https://zyz-nwpu.github.io/Geometry-Constrained-Bidirectional-Point-Cloud-Registration/">
     <img alt="Project" src="https://img.shields.io/badge/Project-Page-1a7f64?style=for-the-badge">
   </a>
+  <a href="https://dl.acm.org/doi/10.1145/3836772#core-tabbed-abstracts">
+    <img alt="Paper" src="https://img.shields.io/badge/Paper-ACM-117cad?style=for-the-badge">
+  </a>
 </p>
 
 NEWS:🎉 Our paper, **“Geometry-Constrained Bidirectional Point Cloud Registration for Thin, Sheet-Like Heritage Artifacts,”** has been accepted for publication in the **ACM Journal on Computing and Cultural Heritage (JOCCH)**!
