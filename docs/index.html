@@ -396,7 +396,7 @@
         <section id="abstract" aria-labelledby="abstract-title">
           <h2 id="abstract-title">Abstract</h2>
           <p class="abstract">
-            Non-contact three-dimensional reconstruction of thin, sheet-like heritage artifacts poses significant geometric and registration challenges. Due to their fragility, these artifacts cannot be suspended or equipped with artificial markers, necessitating independent acquisition of their front and back surfaces. Subsequent registration proves difficult due to the limited number of shared geometric features and the scarcity of explicit physical constraints, which may result in rotational ambiguity, instability, and structural collapse during iterative optimization. To address these challenges, we propose a geometry-constrained bidirectional point cloud registration method specifically tailored for thin, sheet-like heritage artifacts. The method integrates semantic-guided preprocessing, Principal Component Analysis (PCA)-based geometric normalization, and a thickness-aware registration strategy. The estimated physical thickness is incorporated as a geometric constraint to preserve structural integrity during registration. Rotational ambiguity is resolved by evaluating a finite set of global rotation hypotheses, each refined using the point-to-plane Iterative Closest Point (ICP) algorithm, with the optimal transformation selected via a geometry-aware fitness criterion consistent with the thickness scale. Experimental results show that the proposed method achieves competitive or improved performance in most cases, particularly in projected area consistency and physically plausible front-back alignment. In addition, the thickness-aware constraint and rotation-hypothesis evaluation reduce the risk of degenerate configurations in which the two surfaces are incorrectly flipped while still yielding deceptively acceptable numerical scores, supporting reliable non-contact digitization of delicate and thin heritage artifacts. Implementation details will be made available upon publication.
+            Non-contact three-dimensional reconstruction of thin, sheet-like heritage artifacts poses significant geometric and registration challenges. Due to their fragility, these artifacts ca[...]
           </p>
 
           <div class="contribution-grid" aria-label="Key ideas">
@@ -418,7 +418,7 @@
         <section id="method" aria-labelledby="method-title">
           <h2 id="method-title">Method</h2>
           <p class="method-summary">
-            The method treats front- and back-side acquisition as two independent reconstruction problems before registration. It first purifies the reconstructed point clouds using image masks, then normalizes the artifact geometry with PCA, estimates the physical thickness direction, evaluates a finite set of rotation hypotheses, and finally refines the selected alignment with thickness-aware ICP.
+            The method treats front- and back-side acquisition as two independent reconstruction problems before registration. It first purifies the reconstructed point clouds using image masks, [...]
           </p>
 
           <div class="figure-list">
@@ -427,8 +427,8 @@
                 <img src="assets/figures/fig-1-overview-diagram.jpg" alt="Overview of the geometry-constrained bidirectional point cloud registration pipeline">
               </div>
               <figcaption>
-                <strong>Figure 1.</strong> Overall geometry-constrained bidirectional registration pipeline. The workflow starts from double-sided multi-view acquisition, removes background and reconstruction artifacts through semantic-guided 2D-3D purification, normalizes each artifact-only point cloud with PCA, estimates thickness, searches over rotation hypotheses, and refines the final alignment with ICP before fitness evaluation.
-                The estimated thickness is used as a physical prior during hypothesis evaluation and refinement, reducing flipped or collapsed solutions that can occur when registering two near-planar surfaces without additional constraints.
+                <strong>Figure 1.</strong> Overall geometry-constrained bidirectional registration pipeline. The workflow starts from double-sided multi-view acquisition, removes background and r[...]
+                The estimated thickness is used as a physical prior during hypothesis evaluation and refinement, reducing flipped or collapsed solutions that can occur when registering two near-p[...]
               </figcaption>
             </figure>
 
@@ -437,8 +437,8 @@
                 <img src="assets/figures/fig-2-purification-diagram.jpg" alt="Artifact-aware multi-view reconstruction and purification pipeline">
               </div>
               <figcaption>
-                <strong>Figure 2.</strong> Artifact-aware reconstruction and purification stage. Double-sided image sets are processed by SfM-MVS to obtain dense point clouds and camera poses, while Segment Anything Model 2 produces semantic masks. The masks and 3D structure are combined to remove non-artifact regions and produce clean front/back point clouds for subsequent registration.
-                This stage separates the artifact from the support surface and surrounding reconstruction noise. The semantic masks provide image-level evidence, while the multi-view reconstruction provides 3D structure. Combining both cues yields artifact-only point clouds, which are more suitable for the later geometry-constrained registration stage.
+                <strong>Figure 2.</strong> Artifact-aware reconstruction and purification stage. Double-sided image sets are processed by SfM-MVS to obtain dense point clouds and camera poses, wh[...]
+                This stage separates the artifact from the support surface and surrounding reconstruction noise. The semantic masks provide image-level evidence, while the multi-view reconstructi[...]
               </figcaption>
             </figure>
           </div>
@@ -487,7 +487,7 @@
     </div>
 
     <script>
-      const PAPER_URL = "";
+      const PAPER_URL = "https://dl.acm.org/doi/10.1145/3836772#core-tabbed-abstracts";
       const paperLink = document.getElementById("paper-link");
 
       if (PAPER_URL.trim()) {
